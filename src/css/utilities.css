@@ -7,13 +7,109 @@
  * More info:
  * https://tailwindcss.com/docs/functions-and-directives#layer
 */
-
+/*fonts*/
+@font-face {
+  font-family: 'Arial Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Regular'), url('ARIAL.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Narrow';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Narrow'), url('ARIALN.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Italic'), url('ARIALI 1.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Italic'), url('ARIALI.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Narrow Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Narrow Italic'), url('ARIALNI.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Medium'), url('ArialMdm.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Medium Italic'), url('ArialMdmItl.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Bold'), url('ARIALBD 1.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Bold'), url('ARIALBD.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Narrow Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Narrow Bold'), url('ARIALNB.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Bold Italic'), url('ARIALBI 1.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Bold Italic'), url('ARIALBI.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Narrow Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Narrow Bold Italic'), url('ARIALNBI.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Black'), url('ARIBLK.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Black Italic'), url('ARIALBLACKITALIC.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Light Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Light Regular'), url('ARIALLGT.woff') format('woff');
+}
+/*fonts*/
 @layer utilities {
   .break-word {
     word-break: break-word;
   }
 }
-
 /* For displaying cutom text in preheader. Veeva will add .AE_customText class if we use customText token, so we check if it is added and rewrite with !important to show. It will disappear when sending */
 .pre-header_cT_span:has(.AE_customText) {
   display: block !important;
@@ -21,11 +117,217 @@
   visibility: visible !important;
   overflow: unset !important;
 }
-
-.pre-header_cT_span > select {
+.pre-header_cT_span>select {
   @apply absolute top-0 left-0 w-full text-[16px];
 }
-
 table select {
   max-width: 300px;
 }
+/*--custome--*/
+.foot-text {
+  font-size: 12px !important;
+  line-height: 100%;
+  color: #444444;
+  text-align: center;
+  padding-top: 15px;
+  font-family: 'Arial Regular', sans-serif;
+}
+.text {
+  line-height: 100%;
+  color: #444444;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 15px;
+  font-family: 'Arial Regular', sans-serif;
+}
+.text-3 {
+  line-height: 20px;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 5px;
+}
+.text-2 {
+  line-height: 18px;
+  color: #000000;
+  font-size: 12px;
+  text-align: left;
+  padding-top: 30px;
+  font-weight: bold;
+  font-family: 'Arial Bold', sans-serif;
+}
+.pad-two {
+  padding-top: 40px !important;
+}
+.pad-entire3 {
+  padding-top: 2px;
+  padding-bottom: 15px;
+}
+.pad-entire {
+  padding-top: 15px;
+}
+.pad-entire4 {
+  padding-top: 6px;
+}
+.pad-entire5 {
+  padding-top: 10px !important;
+}
+.pad-btm {
+  padding-bottom: 15px !important;
+}
+.pad-entire2 {
+  padding-top: 25px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 100%;
+  color: #095858;
+  font-weight: bold;
+  font-family: 'Arial Bold', sans-serif;
+}
+.pad-entire3 {
+  padding-top: 12px;
+  text-align: center;
+  font-size: 20px;
+  color: #095858;
+  font-weight: bold;
+  font-family: 'Arial Bold', sans-serif;
+}
+.header {
+  padding-top: 20px !important;
+  line-height: 17px;
+  color: #000000;
+  font-size: 12px;
+  line-height: 100%;
+  font-family: 'Arial Regular', sans-serif;
+}
+.pad {
+  padding: 25px 0px !important;
+  font-size: 22px;
+  color: #095858;
+  font-weight: bold;
+  text-align: center;
+  line-height: 26px;
+}
+.pad-section {
+  padding: 0px 20px 12px !important;
+  font-size: 18px;
+  text-align: center;
+}
+.pad-section1 {
+  padding-bottom: 20px !important;
+}
+.img {
+  pointer-events: none;
+  width: 110px !important;
+  vertical-align: middle !important;
+}
+.fr-background {
+  background-color: #F0F5F5;
+}
+.img-two {
+  pointer-events: none;
+  width: 110px !important;
+}
+.img-one {
+  pointer-events: none;
+  width: 100% !important;
+  display: block !important;
+  padding-top: 15px !important;
+}
+.mob-align {
+  width: 100% !important;
+  display: block !important;
+}
+.header img {
+  max-width: 100%;
+}
+.text-white {
+  background-color: #ffffff;
+}
+.text-footer {
+  color: #000000;
+  font-size: 12px;
+  line-height: 100%;
+  font-family: 'Arial Regular', sans-serif;
+  padding-top: 10px;
+}
+.text-footer3 {
+  line-height: 100%;
+  color: #000000;
+  font-size: 12px;
+  font-family: 'Arial Regular', sans-serif;
+}
+.pad-leftright {
+  padding: 0px 20px !important;
+}
+.pr-0 {
+  padding-right: 0px !important;
+}
+.pad-right {
+  padding-right: 20px;
+  text-align: left;
+}
+.hr-line {
+  border-top: 2px solid #94a6a6;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+.text-container img {
+  font-size: 20px;
+  padding-bottom: 35px;
+}
+.text-container td {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+@media only screen and (max-width:600px) {
+  .pad-one {
+    padding-top: 0px !important;
+  }
+  .mob-space1 {
+    padding: 15px 10px;
+  }
+  .mob-space {
+    line-height: 13px !important;
+    vertical-align: middle !important;
+  }
+  .mob-number {
+    width: 5% !important;
+  }
+  .em-hide {
+    display: none !important;
+  }
+  .img-mob {
+    width: 150px !important;
+    vertical-align: middle !important;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+  .mob-padhide {
+    padding: 0px 0px !important;
+  }
+  .mob-secpad {
+    padding: 20px 12px 10px 12px !important;
+  }
+  .mobile-pad {
+    padding-top: 10px !important;
+  }
+  .mob-secpad2 {
+    padding: 10px 10px !important;
+  }
+}
+
+/*custome*/
